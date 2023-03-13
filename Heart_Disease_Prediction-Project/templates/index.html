@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <link href="/static/index_HD.css" rel="stylesheet">
+  
+  <title>Heart_Disease_API</title>
+	<link rel = "icon" href = "/static/love.png" >
+	 
+</head>
+
+<body class="heart__analysis__container">
+	<!-- <img src="bg.jpg"></img> -->
+ <div class="login container">
+	 <h1 class="header">
+		 <a href="/" ><img src="{{ url_for('static', filename='love.png') }}" class="heart__icon"/></a>	
+		 <span class="title">
+			Heart Disease Analysis
+		</span>
+			 
+	 </h1>
+
+	 <!-- Main Input For Receiving Query to our ML -->
+	 <div class="form__container">
+    <form action="{{ url_for('predict')}}" method="post" class="form">
+	
+		<!-- <label>Age</label> -->
+		<div class="row">
+			<div class="col-25">
+				<label for="fname">Age</label>
+			</div>
+			<div class="col-75">
+				<input name="Age" type="number" min="1" max="100" placeholder="Age">
+			</div>
+		</div>
+		
+		<!-- <label>Gender</label> -->
+		<div class="row">
+			<div class="col-25">
+				<label for="fname">Gender</label>
+			</div>
+			<div class="col-75">
+				<select id="Gender" name="Gender">
+					<option value="1">Male</option>
+					<option value="0">Female</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-25">
+				<label>Chest pain type</label>
+			</div>
+			<div class="col-75">
+				<select id="Chest pain type" name="CP">
+				<option value="0">Typical Angina</option>
+				<option value="1">Atypical Angina</option>
+				<option value="2">Non-Anginal pain</option>
+				<option value="3">Asymptomatic</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-25">
+				<label>Resting blood pressure</label>
+			</div>
+			<div class="col-75">
+				<input type="text" name="RBP" placeholder="Resting blood pressure(0-300)" required="required" autocomplete="off"/>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-25">
+				<label>Serum cholestoral</label>
+			</div>
+			<div class="col-75">
+				<input type="text" name="SC" placeholder="Serum cholestoral(0-600)mg/dl" required="required" autocomplete="off"/>
+				</div>
+		</div>
+
+		<div class="row">
+			<div class="col-25">
+				<label>Fasting blood sugar</label>
+			</div>
+			<div class="col-75">
+				<select id="Fasting blood sugar" name="FBS">
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+				</select>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-25">
+				<label>Resting electrocardiographic results</label>
+			</div>
+			<div class="col-75">
+				<select id="Resting electrocardiographic results" name="RER">
+					<option value="0">Normal</option>
+					<option value="1">ST-T wave abnormality</option>
+					<option value="2">Showing probable or definite left ventricular hypertrophy by Estes' criteria</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-25">
+				<label>Maximum heart rate achieved</label>
+			</div>
+			<div class="col-75">
+				<input type="text" name="MHR" placeholder="Maximum heart rate achieved(0-300)" required="required" autocomplete="off" />
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-25">
+				<label>Exercise induced angina</label>
+			</div>
+			<div class="col-75">
+				<select id="Exercise induced angina" name="EIA">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-25">
+				<label>ST depression</label>
+			</div>
+			<div class="col-75">
+				<input type="text" name="ST" placeholder="ST depression induced by exercise relative to rest(0-10)" required="required" autocomplete="off"/>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-25">
+				<label>ST segment</label>
+			</div>
+			<div class="col-75">
+				<select id="The slope of the peak exercise ST segment" name="SST">
+					<option value="1">Flat</option>
+					<option value="0">Upsloping</option>
+					<option value="2">Downsloping</option>
+				</select>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-25">
+				<label>Number of major vessels(Flourosopy)</label>
+			</div>
+			<div class="col-75">
+				<select id="Number of major vessels colored by flourosopy" name="Flourosopy">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+				</select>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-25">
+				<label>Thal</label>
+			</div>
+			<div class="col-75">
+				<select id="Thal" name="Thal">
+					<option value="1">Normal</option>
+					<option value="2">Fixed defect</option>
+					<option value="3">Reversable defect</option>
+				</select>
+			</div>
+		</div>
+
+
+		
+		<span class="button__wrapper">
+			<button type="submit" class="analyse__btn" >Analyse</button>
+		</span>
+		
+		
+		
+	</form>
+</div>
+
+ </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <link href="/static/index_HD.css" rel="stylesheet">
+  
+  <title>Heart_Disease_API</title>
+  <link rel = "icon" href = "/static/love.png" >
+</head>
+
+<body class="heart__analysis__container">
+	<!-- <img src="bg.jpg"></img> -->
+ <div class="login container">
+	 <h1 class="header">
+		 <a href="/" ><img src="{{ url_for('static', filename='love.png') }}" class="heart__icon"/></a>	
+		 <span class="title">
+			Heart Disease Analysis
+		</span>
+			 
+	 </h1>
+	 
+	 <div class="prediction__text">
+	 {{prediction_text}}
+	 </div>
+	 
+	 
+
+	 <script>
+	function goBack() {
+	  window.history.back();
+	}
+	</script>
+	 
+	 <span class="button__wrapper">
+		<button onclick="goBack()" class="analyse__btn" >Click here to test another patient</button>
+	</span>
+		
+	
+		
+	</form>
+
+	
+ </div>
+</body>
+</html>
