@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+  }
+
+  .heart__analysis__container {
+    display: contents;
+  }
+
+  .form {
+    margin-top: 2rem;
+    box-shadow: 0 19px 38px rgba(33, 33, 33, 0.3), 0 15px 12px rgba(33, 33, 33, 0.22);
+    border-radius: 5px;
+    padding: 2rem;
+  }
+
+  .form__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header {
+    text-align: center;
+    color: #4255d6;
+    font-weight: 400;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .footer__description{
+    text-align: end;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    right: 1rem;
+    
+}
+
+  .git__logo {
+    margin-right: 1rem;
+  }
+
+  .title {
+    font-size: 46px;
+  }
+  
+  input[type=text],input[type=number], select, textarea {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 22px;
+    resize: vertical;
+    outline: none;
+  }
+  
+  #result {
+      display: none;
+      background: #4255d6;
+      padding: 2rem;
+      color: white;
+      border-radius: 4rem;
+      align-items: center;
+      right: 2rem;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    color: #4154de;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .container {
+    /* background-color: #d1e8ea; */
+    padding: 2rem;
+    /* background-image: url("bg.jpg"); */
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 58%;
+    margin-top: 6px;
+  }
+
+  .row {
+    /* line-height: 2; */
+    margin: 0.4rem;
+
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .heart__icon {
+    margin-right: 1.4rem;
+  }
+  .analyse__btn {
+    background: #efe9e9;
+    outline: none;
+    border: 1ox solid black;
+    padding: 0.8rem 2rem;
+    border-radius: 1.8rem;
+    cursor: pointer;
+    border: 1px solid #e1e1e1;
+    color: #4154de;
+    font-size: 18px;
+  }
+
+  .analyse__btn:hover {
+      background:#4255d6;
+      color:white;
+  }
+
+  .button__wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+  }
+  
+  .prediction__text {
+    text-align: center;
+    color: #190e0e;
+    font-size: 20px;
+    position: relative;
+    top: 0.4rem;
+}
+
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+ 
+ 
+
+
+  
